@@ -1,0 +1,12 @@
+init 3
+count ../zad1/library.c
+count ../zad1/library.h
+count ../zad2/repl.c
+show 0
+show 1
+show 2
+delete 0
+delete 0
+delete 0
+destroy
+exit

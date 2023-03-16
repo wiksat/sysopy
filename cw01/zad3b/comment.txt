@@ -1,0 +1,4 @@
+1. Tu ponownie widać że bibliloteka statyczna pracuje najszybciej
+2. Pliki skompilowane z parametrem -O rzeczywiście przyspieszają działanie programu w porównaniu do braku parametru
+3. Pliki skompilowane z parametrem -O2 jeszcze bardziej przyspieszają działanie programu
+4. Pliki skompilowane z parametrem -Os nie wykazują jakiejś większej zmiany w szybkości działanie progrsamu

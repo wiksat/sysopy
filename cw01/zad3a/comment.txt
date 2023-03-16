@@ -1,0 +1,4 @@
+
+Najwięcej czasu zajmuje wykonanie funkcji count.
+Najszybciej pracuje biblioteka statyczna.
+Wyniki użytkownika i systemu są niezauważalne.

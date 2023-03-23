@@ -23,5 +23,6 @@ int main(int argc, char* argv[]){
         wait(NULL);
 	}
 	printf("Number of forks: %d\n", how_many);
+    return(0);
     
 }

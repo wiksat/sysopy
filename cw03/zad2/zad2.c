@@ -19,7 +19,7 @@ int main(int argc, char* argv[]){
 
     fflush(stdout);
 
-	if (execl("/bin/ls", "ls", path, NULL) == -1) {
+	if (execl("/bin/ls", "ls", path, NULL) == -1) { //ostatni argument musi mieć wartość NULL
         printf("Wrror while execl");
 		return 1;
 	}

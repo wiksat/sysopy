@@ -1,0 +1,3 @@
+Flaga SA_SIGINFO - Procedura obsługi sygnału przyjmuje trzy argumenty, a nie jeden
+Flaga SA_RESTART -  Zapewnia zachowanie zgodne z semantyką sygnału BSD przez ponowne uruchamianie niektórych wywołań systemowych między sygnałami.Ta flaga służy do określenia, czy system powinien automatycznie wznowić niektóre operacje systemowe, które zostały przerwane przez obsługę sygnału. 
+Flaga SA_NODEFER - Ta flaga służy do określenia, czy system powinien zablokować dalsze wystąpienia danego sygnału podczas obsługi sygnału. Innymi słowy, gdy flaga SA_NODEFER jest ustawiona, proces może otrzymać ten sam sygnał podczas obsługi poprzedniego sygnału.

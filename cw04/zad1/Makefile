@@ -1,10 +1,9 @@
-CC = gcc -Wall -Werror
 
 main: clean
-	$(CC) main.c -o main
-	$(CC) exec_ignore.c -o exec_ignore
-	$(CC) exec_mask.c -o exec_mask
-	$(CC) exec_pending.c -o exec_pending
+	gcc -Wall -Werror main.c -o main
+	gcc -Wall -Werror exec_ignore.c -o exec_ignore
+	gcc -Wall -Werror exec_mask.c -o exec_mask
+	gcc -Wall -Werror exec_pending.c -o exec_pending
 	
 test : main test_child test_exec
 	

@@ -1,0 +1,45 @@
+ignore
+(PID: 7069) Raising signal
+(PID: 7070) Raising signal
+
+
+handler
+(PID: 7074) Raising signal
+(PID: 7074) Received signal: 10
+(PID: 7075) Raising signal
+(PID: 7075) Received signal: 10
+
+
+mask
+(PID: 7079) Raising signal
+(PID: 7079) Signal blocked: 1
+(PID: 7080) Raising signal
+(PID: 7080) Signal blocked: 1
+
+
+pending
+(PID: 7084) Raising signal
+(PID: 7084) Signal is pending
+(PID: 7085) Signal is not pending
+
+
+execIgnore
+Raising signal before exec
+Raising signal in exec
+
+
+execMask
+Raising signal before exec
+Raising signal in exec
+EXEC Signal blocked: 1
+
+
+execPending
+Raising signal before exec
+Signal is pending before exec
+Signal is pending in exec
+
+Wnioski: 
+Process potomny dziedziczy maski sygnałów i obsługe sygnałów ale nie dziedziczy sygnałów oczekujących.
+Po wykonaniu funkcji exec maska obsługi sygnałów i nieobsłużone sygnały są takie same jak w procesie,
+w którym wywołano funkcję exec.

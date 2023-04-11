@@ -71,7 +71,7 @@ int main(int argc, char** argv) {
 		}
 		else if (catcher_state == 4) {
 			print_time();
-			sleep(1); //?
+			sleep(1); 
 			done = 0;
 		}
 		else if (catcher_state == 5) {

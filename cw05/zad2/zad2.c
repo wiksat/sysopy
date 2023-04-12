@@ -7,8 +7,6 @@
 
 double lower_bound = 0.0;
 double upper_bound = 1.0;
-double interval_width;
-int n;
 double current_pos = 0.0;
 
 
@@ -38,7 +36,8 @@ int main(int argc, char** argv) {
 	}
     clock_t start, end;
 	start = clock();
-
+	double interval_width;
+	int n;
 	interval_width = strtod(argv[1], NULL);
 	n = atoi(argv[2]);
 
@@ -73,9 +72,9 @@ int main(int argc, char** argv) {
 	double time = ((double) (end - start)) / CLOCKS_PER_SEC;
 
 
-	printf(">> RESULT <<\n");
-	printf("sum = %lf\nn = %d\ndx = %lf\n", res, n, interval_width);
+	printf(">> RESULT\n");
+	printf("sum = %lf\nn = %d\ninterval_width = %lf\n", res, n, interval_width);
 	printf("TIME USED: %fs\n", time);
-	printf("-------------\n");
+	printf("-------------\n\n");
 	exit(0);
 }

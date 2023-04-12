@@ -8,15 +8,15 @@
 #include <signal.h>
 #include <limits.h>
 
-void listing_emails(char *option){
+void listing(char *option){
     FILE *file;
     char *command,line[LINE_MAX];
     if (strcmp(option,"sender") == 0){
         command = "echo | mail -H | sort -k 2";
     }else if (strcmp(option,"date") == 0){
-        command = "echo | mail -H | sort -k 3 --reverse";
+        command = "echo | mail -H | sort -k 3";
     }else{
-        fprintf(stderr,"Wrong option \n");
+        fprintf(stderr,"Wrong option\n");
         exit(1);
     }
     if ((file = popen(command, "r")) == NULL) {
@@ -28,7 +28,7 @@ void listing_emails(char *option){
     }
     pclose(file);
 }
-void sending_emails(char *adress,char *title,char *content){
+void sending(char *adress,char *title,char *content){
     FILE *file;
     char command[LINE_MAX];
     sprintf(command, "echo %s | mail -s %s %s", content, title, adress);
@@ -36,7 +36,7 @@ void sending_emails(char *adress,char *title,char *content){
         perror("popen error\n");
         exit(1);
     }
-    printf("Email sent to: %s\nTitle: %s\nContent:\n%s\n", adress, title, content);
+    printf("Email sent to: %s\nTitle: %s\nContent:\n%s\n\n", adress, title, content);
     
     pclose(file);
 }
@@ -46,15 +46,13 @@ int main(int argc,char *argv[]){
         exit(1);
     }
     if (argc == 2){
-        char *option;
-        option = argv[1];
-        listing_emails(option);
+        char *option = argv[1];
+        listing(option);
     }else {
-        char *adress,*title,*content;
-        adress = argv[1];
-        title = argv[2];
-        content = argv[3];
-        sending_emails(adress,title,content);
+        char *adress = argv[1];
+        char *title = argv[2];
+        char *content = argv[3];
+        sending(adress,title,content);
     }
     return 0;
 }

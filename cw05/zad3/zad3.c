@@ -33,9 +33,9 @@ int main(int argc, char** argv) {
 	mkfifo("/tmp/my_fifo", 0666);
 
 
-    double area;
-char beginA[1024];
-char endA[1024];
+	char beginA[1024];
+	char endA[1024];
+	
 	for (size_t i = 0; i < n; i++)
 	{
         if(0 == fork()){
@@ -61,9 +61,9 @@ char endA[1024];
 	double time = ((double) (end - start)) / CLOCKS_PER_SEC;
 
 
-	printf(">> RESULT <<\n");
-	printf("sum = %lf\nn = %d\ndx = %lf\n", res, n, interval_width);
+	printf(">> RESULT\n");
+	printf("sum = %lf\nn = %d\ninterval_width = %lf\n", res, n, interval_width);
 	printf("TIME USED: %fs\n", time);
-	printf("-------------\n");
+	printf("-------------\n\n");
 	exit(0);
 }

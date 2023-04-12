@@ -1,0 +1,28 @@
+>> RESULT
+sum = 3.141613
+n = 5
+interval_width = 0.000020
+TIME USED: 0.000739s
+-------------
+
+>> RESULT
+sum = 3.141613
+n = 500
+interval_width = 0.000020
+TIME USED: 0.075774s
+-------------
+
+>> RESULT
+sum = 3.141613
+n = 5000
+interval_width = 0.000020
+TIME USED: 0.838510s
+-------------
+
+>> RESULT
+sum = 3.141893
+n = 10000
+interval_width = 0.000100
+TIME USED: 1.669507s
+-------------
+

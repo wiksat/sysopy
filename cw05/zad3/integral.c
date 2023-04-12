@@ -3,12 +3,9 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-#define BUFFER_SIZE 1024
-char buffer[BUFFER_SIZE] = "";
 double lower_bound = 0.0;
 double upper_bound = 1.0;
-double interval_width;
-int n;
+
 double current_pos = 0.0;
 
 double fun(double x) {
@@ -33,13 +30,7 @@ int main(int argc, char** argv) {
 	double begin = strtod(argv[1], NULL);
 	double end = strtod(argv[2], NULL);
 	double dx = strtod(argv[3], NULL);
-
 	double res = calculate_integral(begin, end, dx);
-	// ssize_t size = snprintf(buffer, BUFFER_SIZE, "%f\n", res);
-
-	// int fifo = open("/tmp/int_q", O_WRONLY);
-	// write(fifo, buffer, size);
-	// close(fifo);
 
     FILE* stream = fopen("/tmp/my_fifo","w");
     fwrite(&res,sizeof(double),1,stream);

@@ -58,7 +58,7 @@ void explore(char* path, char* chain){
 
 			free(line);
 			fclose(file);
-        }
+        } 
     }
     	if (closedir(dirp) == -1) {
 		perror("closedir error");
